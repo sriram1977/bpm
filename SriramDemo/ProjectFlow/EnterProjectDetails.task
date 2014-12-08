@@ -1,0 +1,65 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<taskDefinition targetNamespace="http://xmlns.oracle.com/SriramDemo/ProjectFlow/EnterProjectDetails" xmlns:xp20="http://www.oracle.com/XSL/Transform/java/oracle.tip.pc.services.functions.Xpath20" xmlns:ora="http://schemas.oracle.com/xpath/extension" xmlns:oraext="http://www.oracle.com/XSL/Transform/java/oracle.tip.pc.services.functions.ExtFunc" xmlns:task="http://xmlns.oracle.com/bpel/workflow/task" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://xmlns.oracle.com/bpel/workflow/taskDefinition" xmlns:bpm="http://xmlns.oracle.com/bpmn20/extensions">
+   <name>EnterProjectDetails</name>
+   <id>${domain_id}_${process_id}_${process_revision}_EnterProjectDetails</id>
+   <title type="XPATH"><value>string('Please Enter Project Details')</value></title>
+   <priority>3</priority>
+   <process processId="" processVersion=""/>
+   <routingSlip xmlns="http://xmlns.oracle.com/bpel/workflow/routingSlip">
+      <globalConfiguration><applicationContext>OracleBPMProcessRolesApp</applicationContext>
+         <taskOwner type="STATIC" identityType="application_role">ProjectFlow.ProcessOwner</taskOwner>
+         <sharePayloadConfiguration>
+            <type>USE_SYSTEM_WIDE_GLOBAL_CONFIGURATION</type>
+         </sharePayloadConfiguration>
+      </globalConfiguration>
+      <participants isAdhocRoutingSupported="false">
+         <stage name="Stage1">
+            <participant name="default.DefaultPerformer">
+               <resource identityType="application_role" type="XPATH">bpm:getPerformer()</resource>
+            </participant>
+         </stage>
+      </participants>
+      <onErrorParticipant>
+         <resource type="STATIC" identityType="group">Supervisor</resource>
+      </onErrorParticipant>
+      <notification includeTaskAttachments="false" actionable="false"
+                    secureNotifications="false"
+                    oneNotificationPerUserPerAction="false"
+                    hideWorklistUrlInEmail="false">
+         <action name="ASSIGN" recipient="ASSIGNEES"><![CDATA[concat(string('Task '), /task:task/task:title, string(' requires your attention.'))]]></action>
+         <action name="COMPLETE" recipient="CREATOR"><![CDATA[concat(string('Task '), /task:task/task:title, string(' requires your attention.'))]]></action>
+         <action name="ERROR" recipient="OWNER"><![CDATA[concat(string('Task '), /task:task/task:title, string(' requires your attention.'))]]></action>
+         <groupNotificationConfiguration>SEND_INDIVIDUAL_NOTIFICATION</groupNotificationConfiguration>
+      </notification>
+   </routingSlip>
+   <workflowConfiguration features="ucm" xmlns="http://xmlns.oracle.com/bpel/workflow/configuration"
+                          xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <outcomes default="OK">
+         <outcome>OK</outcome>
+      </outcomes>
+      <payload xmlSchemaDefinition="xsd/EnterProjectDetailsPayload.xsd"
+               externalSchema="false">
+         <messageAttribute name="tProjectCost" attributeType="SIMPLE_TYPE"
+                           type="xsd:decimal" updatable="true"
+                           external="false"/>
+      </payload>
+      <bpelEventListener>false</bpelEventListener>
+      <bpelNoCallbacks>false</bpelNoCallbacks>
+      <showCompleteGraphicalHistory>true</showCompleteGraphicalHistory>
+      <reevalTranslatablesOnUpdate>false</reevalTranslatablesOnUpdate>
+      <preActionMandatoryUserSteps>
+         <preActionMandatoryUserStep>
+            <userStep>PROVIDE_COMMENTS</userStep>
+            <outcome>OK</outcome>
+         </preActionMandatoryUserStep>
+      </preActionMandatoryUserSteps>
+      <allowInitiatorEditParticipants>false</allowInitiatorEditParticipants>
+      <allowParticipantsEditParticipants>false</allowParticipantsEditParticipants>
+      <globalCreationTask>false</globalCreationTask>
+      <taskFlowFileLocation>file:/Users/Sriram/jdeveloper/mywork/SriramDemo/EnterProjectDetailsUI/public_html/WEB-INF/EnterProjectDetails_TaskFlow.xml</taskFlowFileLocation>
+      <enableAutoClaim>true</enableAutoClaim>
+      <workflowConditions/>
+      <taskSequenceTypes>FUTURE</taskSequenceTypes>
+      <taskSequenceTypes>AGGREGATE</taskSequenceTypes>
+   </workflowConfiguration>
+</taskDefinition>

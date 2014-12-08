@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?oracleBPM version="11.1.1.7.0.1.61" fileRevision="20090820"?>
+<ns3:organization xmlns:ns2="http://xmlns.oracle.com/bpm/identity" xmlns="http://xmlns.oracle.com/bpm/lpg/peopleQuery" xmlns:ns4="http://xmlns.oracle.com/bpel/workflow/taskQuery" xmlns:ns3="http://xmlns.oracle.com/bpm/organization" xmlns:ns5="http://xmlns.oracle.com/bpel/workflow/task">
+    <ns3:updateExistingObjects>false</ns3:updateExistingObjects>
+    <ns3:organizationalUnits/>
+    <ns3:applicationRoles>
+        <ns3:applicationRole isProcessRole="false" id="ProjectFlow.ProcessOwner">
+            <ns2:name>ProjectFlow.ProcessOwner</ns2:name>
+            <ns3:member type="GROUP">
+                <ns3:name>Administrators</ns3:name>
+            </ns3:member>
+            <ns3:member type="GROUP">
+                <ns3:name>Supervisor</ns3:name>
+            </ns3:member>
+            <ns3:processRole name="Process Owner" id="ProcessOwner"/>
+        </ns3:applicationRole>
+        <ns3:applicationRole isProcessRole="true" id="ProjectFlow.BusinessAnalyst">
+            <ns2:name>ProjectFlow.BusinessAnalyst</ns2:name>
+            <ns3:member type="GROUP">
+                <ns3:name>Supervisor</ns3:name>
+            </ns3:member>
+            <ns3:processRole name="BusinessAnalyst" id="BusinessAnalyst"/>
+        </ns3:applicationRole>
+        <ns3:applicationRole isProcessRole="true" id="ProjectFlow.ProjectManager">
+            <ns2:name>ProjectFlow.ProjectManager</ns2:name>
+            <ns3:member type="GROUP">
+                <ns3:name>Project Manager</ns3:name>
+            </ns3:member>
+            <ns3:processRole name="ProjectManager" id="ProjectManager"/>
+        </ns3:applicationRole>
+        <ns3:applicationRole isProcessRole="true" id="ProjectFlow.BusinessSponsor">
+            <ns2:name>ProjectFlow.BusinessSponsor</ns2:name>
+            <ns3:member type="GROUP">
+                <ns3:name>Business Sponsor</ns3:name>
+            </ns3:member>
+            <ns3:processRole name="BusinessSponsor" id="BusinessSponsor"/>
+        </ns3:applicationRole>
+    </ns3:applicationRoles>
+    <ns3:applicationRoleOrgUnitCalendarAssociations/>
+    <ns3:participantPropertiesList/>
+    <ns3:holidayRules/>
+    <ns3:calendarRules/>
+</ns3:organization>

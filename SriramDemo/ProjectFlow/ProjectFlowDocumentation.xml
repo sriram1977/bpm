@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?oracleBPM version="11.1.1.7.0.1.61" fileRevision="20120217"?>
+<processDocumentation xmlns="http://xmlns.oracle.com/bpm/taskMetadataService/processDocumentation">
+    <component name="ProjectFlow">
+        <topicDocumentations>
+            <topicDocumentation name="ProjectFlow">
+                <descriptions>
+                    <description locale="en">ProjectFlow</description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT11617375497661">
+                <labels>
+                    <label locale="en">Upload BRD</label>
+                </labels>
+                <descriptions>
+                    <description locale="en">Please Upload the BRD</description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT11634714631688">
+                <labels>
+                    <label locale="en">High Level Cost</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT11635411651337">
+                <labels>
+                    <label locale="en">SponsorApproval</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="EVT1161737549752">
+                <labels>
+                    <label locale="en">Start</label>
+                </labels>
+            </topicDocumentation>
+            <topicDocumentation name="EVT11617375497693">
+                <labels>
+                    <label locale="en">End</label>
+                </labels>
+            </topicDocumentation>
+            <topicDocumentation name="GTW11635466143057">
+                <labels>
+                    <label locale="en">Require Approval ?</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf19"/>
+            <topicDocumentation name="sf20"/>
+            <topicDocumentation name="sf13"/>
+            <topicDocumentation name="sf47"/>
+            <topicDocumentation name="sf54">
+                <labels>
+                    <label locale="en">No</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf56">
+                <labels>
+                    <label locale="en">Yes</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+        </topicDocumentations>
+    </component>
+</processDocumentation>

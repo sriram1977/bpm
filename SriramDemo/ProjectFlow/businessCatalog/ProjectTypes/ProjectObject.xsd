@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?bpmo version="11.1.1.7.0.1.61" build="1.61" fullName="ProjectTypes.ProjectObject" modifiers="268435456"?>
+<!--########################################################################################-->
+<!--####                                                                                ####-->
+<!--####          THIS IS AN AUTO GENERATED FILE. PLEASE DO NOT MANUALLY MODIFY         ####-->
+<!--#### CHANGES TO THIS FILE MAY PRODUCE UNEXPECTED BEHAVIOR AND WOULD BE OVERWRITTEN  ####-->
+<!--####                                                                                ####-->
+<!--########################################################################################-->
+<xs:schema targetNamespace="http://xmlns.oracle.com/bpm/bpmobject/ProjectTypes/ProjectObject" elementFormDefault="qualified" xmlns="http://xmlns.oracle.com/bpm/bpmobject/ProjectTypes/ProjectObject"  xmlns:xs="http://www.w3.org/2001/XMLSchema"  xmlns:bpmo="http://xmlns.oracle.com/bpm/bpmobject/" >
+    <xs:complexType name="ProjectObjectType">
+        <xs:sequence>
+            <xs:element name="brdURL" nillable="true" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>
+                        <bpmo:documentable>
+                            <bpmo:description>
+                                BRD URL
+                            </bpmo:description>
+                        </bpmo:documentable>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="projectCost" default="0.000" nillable="true" type="xs:decimal">
+                <xs:annotation>
+                    <xs:documentation>
+                        <bpmo:documentable>
+                            <bpmo:description>
+                                Project Cost
+                            </bpmo:description>
+                        </bpmo:documentable>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="highLevelCostApproval" nillable="true" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="ProjectObject" type="ProjectObjectType"/>
+</xs:schema>
