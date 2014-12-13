@@ -32,6 +32,14 @@
                     <description locale="en"></description>
                 </descriptions>
             </topicDocumentation>
+            <topicDocumentation name="ACT11660103309694">
+                <labels>
+                    <label locale="en">ApprovalRuleTask</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
             <topicDocumentation name="EVT1161737549752">
                 <labels>
                     <label locale="en">Start</label>
@@ -45,6 +53,14 @@
             <topicDocumentation name="GTW11635466143057">
                 <labels>
                     <label locale="en">Require Approval ?</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="GTW11647380560357">
+                <labels>
+                    <label locale="en">Check Approval State</label>
                 </labels>
                 <descriptions>
                     <description locale="en"></description>
@@ -70,6 +86,16 @@
                     <description locale="en"></description>
                 </descriptions>
             </topicDocumentation>
+            <topicDocumentation name="sf11"/>
+            <topicDocumentation name="sf14">
+                <labels>
+                    <label locale="en"></label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf16"/>
         </topicDocumentations>
     </component>
 </processDocumentation>

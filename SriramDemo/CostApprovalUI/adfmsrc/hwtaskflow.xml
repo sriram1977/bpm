@@ -8,4 +8,10 @@
       <httpPort/>
       <httpsPort/>
    </TaskFlowServer>
-<hwTaskFlow><WorkflowName>SponsorApproval</WorkflowName><TaskDefinitionNamespace>http://xmlns.oracle.com/SriramDemo/ProjectFlow/SponsorApproval</TaskDefinitionNamespace><TaskFlowId>SponsorApproval_TaskFlow</TaskFlowId><TaskFlowFileName>WEB-INF/SponsorApproval_TaskFlow.xml</TaskFlowFileName></hwTaskFlow></hwTaskFlows>
+   <hwTaskFlow>
+      <WorkflowName>SponsorApproval</WorkflowName>
+      <TaskDefinitionNamespace>http://xmlns.oracle.com/SriramDemo/ProjectFlow/SponsorApproval</TaskDefinitionNamespace>
+      <TaskFlowId>SponsorApproval_TaskFlow</TaskFlowId>
+      <TaskFlowFileName>WEB-INF/SponsorApproval_TaskFlow.xml</TaskFlowFileName>
+   </hwTaskFlow>
+</hwTaskFlows>

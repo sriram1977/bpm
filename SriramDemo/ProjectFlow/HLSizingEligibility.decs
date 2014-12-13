@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<decisionServices xmlns="http://xmlns.oracle.com/bpel/rules" name="HLSizingEligibility">
+    <ruleEngineProvider provider="Oracle_11.0.0.0.0" name="OracleRulesSDK">
+        <repository type="SCA-Archive">
+            <path>ProjectFlow/oracle/rules/projectflow/HLSizingEligibility.rules</path>
+        </repository>
+    </ruleEngineProvider>
+    <decisionService name="HLSizingEligibility_DecisionService" ruleEngineProviderReference="OracleRulesSDK" targetNamespace="http://xmlns.oracle.com/HLSizingEligibility/HLSizingEligibility_DecisionService">
+        <catalog>HLSizingEligibility</catalog>
+        <pattern name="CallFunctionStateless">
+            <arguments>
+                <call>projectflow.HLSizingEligibility.HLSizingEligibility_DecisionService</call>
+            </arguments>
+        </pattern>
+        <pattern name="CallFunctionStateful">
+            <arguments>
+                <call>projectflow.HLSizingEligibility.HLSizingEligibility_DecisionService</call>
+            </arguments>
+        </pattern>
+    </decisionService>
+</decisionServices>

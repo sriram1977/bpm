@@ -34,14 +34,14 @@
    </routingSlip>
    <workflowConfiguration features="ucm" xmlns="http://xmlns.oracle.com/bpel/workflow/configuration"
                           xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-      <outcomes>
+      <outcomes default="APPROVE">
          <outcome>APPROVE</outcome>
          <outcome>REJECT</outcome>
       </outcomes>
       <payload xmlSchemaDefinition="xsd/SponsorApprovalPayload.xsd"
                externalSchema="false">
          <messageAttribute name="ApprovalOutcome" attributeType="SIMPLE_TYPE"
-                           type="xsd:string" updatable="false"
+                           type="xsd:boolean" updatable="false"
                            external="false"/>
          <messageAttribute name="ProjectCost" attributeType="SIMPLE_TYPE"
                            type="xsd:decimal" updatable="false"
@@ -49,9 +49,27 @@
       </payload>
       <bpelEventListener>false</bpelEventListener>
       <bpelNoCallbacks>false</bpelNoCallbacks>
+      <accessRules>
+         <actionRules>
+            <customAction>APPROVE</customAction>
+            <roles>
+               <role privilege="PERMIT">ASSIGNEES</role>
+               <role privilege="RESTRICT">ADMIN</role>
+               <role privilege="RESTRICT">APPROVERS</role>
+               <role privilege="RESTRICT">CREATOR</role>
+               <role privilege="RESTRICT">REVIEWERS</role>
+               <role privilege="RESTRICT">OWNER</role>
+            </roles>
+         </actionRules>
+      </accessRules>
       <showCompleteGraphicalHistory>true</showCompleteGraphicalHistory>
       <reevalTranslatablesOnUpdate>false</reevalTranslatablesOnUpdate>
-      <preActionMandatoryUserSteps/>
+      <preActionMandatoryUserSteps>
+         <preActionMandatoryUserStep>
+            <userStep>PROVIDE_COMMENTS</userStep>
+            <outcome>REJECT</outcome>
+         </preActionMandatoryUserStep>
+      </preActionMandatoryUserSteps>
       <allowInitiatorEditParticipants>false</allowInitiatorEditParticipants>
       <allowParticipantsEditParticipants>false</allowParticipantsEditParticipants>
       <globalCreationTask>false</globalCreationTask>

@@ -29,7 +29,7 @@
          </stage>
       </participants>
       <onErrorParticipant>
-         <resource type="STATIC" identityType="group">Operators</resource>
+         <resource type="STATIC" identityType="group">TechProcessOwner</resource>
       </onErrorParticipant>
       <notification includeTaskAttachments="false" actionable="false"
                     secureNotifications="false"
@@ -64,14 +64,22 @@
       </flexfieldMappings>
       <bpelEventListener>false</bpelEventListener>
       <bpelNoCallbacks>false</bpelNoCallbacks>
+      <accessRules>
+         <actionRules>
+            <systemAction>UPDATE</systemAction>
+            <roles>
+               <role privilege="PERMIT">ADMIN</role>
+               <role privilege="PERMIT">ASSIGNEES</role>
+               <role privilege="PERMIT">OWNER</role>
+               <role privilege="PERMIT">REVIEWERS</role>
+               <role privilege="RESTRICT">APPROVERS</role>
+               <role privilege="RESTRICT">CREATOR</role>
+            </roles>
+         </actionRules>
+      </accessRules>
       <showCompleteGraphicalHistory>true</showCompleteGraphicalHistory>
       <reevalTranslatablesOnUpdate>false</reevalTranslatablesOnUpdate>
-      <preActionMandatoryUserSteps>
-         <preActionMandatoryUserStep>
-            <userStep>PROVIDE_COMMENTS</userStep>
-            <outcome>OK</outcome>
-         </preActionMandatoryUserStep>
-      </preActionMandatoryUserSteps>
+      <preActionMandatoryUserSteps/>
       <allowInitiatorEditParticipants>false</allowInitiatorEditParticipants>
       <allowParticipantsEditParticipants>false</allowParticipantsEditParticipants>
       <globalCreationTask>true</globalCreationTask>

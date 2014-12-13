@@ -13,6 +13,9 @@
   <import namespace="http://xmlns.oracle.com/bpel/workflow/taskService"
           location="oramds:/soa/shared/workflow/TaskServiceInterface.wsdl"
           importType="wsdl"/>
+  <import namespace="http://xmlns.oracle.com/HLSizingEligibility/HLSizingEligibility_DecisionService"
+          location="HLSizingEligibility_DecisionService.wsdl"
+          importType="wsdl"/>
   <property name="productVersion" type="xs:string" many="false">11.1.1.7.0</property>
   <component name="ProjectFlow">
     <implementation.bpmn src="processes/ProjectFlow.bpmn"/>
@@ -29,6 +32,9 @@
   <component name="SponsorApproval">
     <implementation.workflow src="SponsorApproval.task"/>
   </component>
+  <component name="HLSizingEligibility">
+    <implementation.decision src="HLSizingEligibility.decs"/>
+  </component>
   <wire>
     <source.uri>ProjectFlow/HumanTasks.UploadBRD.reference</source.uri>
     <target.uri>UploadBRD/TaskService</target.uri>
@@ -40,5 +46,9 @@
   <wire>
     <source.uri>ProjectFlow/HumanTasks.SponsorApproval.reference</source.uri>
     <target.uri>SponsorApproval/TaskService</target.uri>
+  </wire>
+  <wire>
+    <source.uri>ProjectFlow/Rules.Projectflow.HLSizingEligibility.HLSizingEligibility_DecisionService.reference</source.uri>
+    <target.uri>HLSizingEligibility/HLSizingEligibility_DecisionService</target.uri>
   </wire>
 </composite>

@@ -45,14 +45,231 @@
       </payload>
       <bpelEventListener>false</bpelEventListener>
       <bpelNoCallbacks>false</bpelNoCallbacks>
+      <accessRules>
+         <attributeRules>
+            <attribute>ATTACHMENTS</attribute>
+            <roles>
+               <role privilege="READ">ADMIN</role>
+               <role privilege="READ">APPROVERS</role>
+               <role privilege="READ">OWNER</role>
+               <role privilege="WRITE">ASSIGNEES</role>
+               <role privilege="WRITE">CREATOR</role>
+               <role privilege="WRITE">REVIEWERS</role>
+            </roles>
+         </attributeRules>
+         <attributeRules>
+            <attribute>COMMENTS</attribute>
+            <roles>
+               <role privilege="READ">ADMIN</role>
+               <role privilege="READ">APPROVERS</role>
+               <role privilege="READ">OWNER</role>
+               <role privilege="WRITE">ASSIGNEES</role>
+               <role privilege="WRITE">CREATOR</role>
+               <role privilege="WRITE">REVIEWERS</role>
+            </roles>
+         </attributeRules>
+         <attributeRules>
+            <attribute>FLEXFIELDS</attribute>
+            <roles>
+               <role privilege="READ">ADMIN</role>
+               <role privilege="READ">APPROVERS</role>
+               <role privilege="READ">REVIEWERS</role>
+               <role privilege="READ">OWNER</role>
+               <role privilege="WRITE">ASSIGNEES</role>
+               <role privilege="WRITE">CREATOR</role>
+            </roles>
+         </attributeRules>
+         <attributeRules>
+            <attribute>PAYLOAD</attribute>
+            <roles>
+               <role privilege="READ">ADMIN</role>
+               <role privilege="READ">APPROVERS</role>
+               <role privilege="READ">REVIEWERS</role>
+               <role privilege="READ">OWNER</role>
+               <role privilege="WRITE">ASSIGNEES</role>
+               <role privilege="WRITE">CREATOR</role>
+            </roles>
+         </attributeRules>
+         <actionRules>
+            <customAction>OK</customAction>
+            <roles>
+               <role privilege="PERMIT">ASSIGNEES</role>
+               <role privilege="RESTRICT">ADMIN</role>
+               <role privilege="RESTRICT">APPROVERS</role>
+               <role privilege="RESTRICT">CREATOR</role>
+               <role privilege="RESTRICT">REVIEWERS</role>
+               <role privilege="RESTRICT">OWNER</role>
+            </roles>
+         </actionRules>
+         <actionRules>
+            <systemAction>ACQUIRE</systemAction>
+            <roles>
+               <role privilege="PERMIT">ASSIGNEES</role>
+               <role privilege="RESTRICT">ADMIN</role>
+               <role privilege="RESTRICT">APPROVERS</role>
+               <role privilege="RESTRICT">CREATOR</role>
+               <role privilege="RESTRICT">REVIEWERS</role>
+               <role privilege="RESTRICT">OWNER</role>
+            </roles>
+         </actionRules>
+         <actionRules>
+            <systemAction>ADHOC_ROUTE</systemAction>
+            <roles>
+               <role privilege="PERMIT">ASSIGNEES</role>
+               <role privilege="RESTRICT">ADMIN</role>
+               <role privilege="RESTRICT">APPROVERS</role>
+               <role privilege="RESTRICT">CREATOR</role>
+               <role privilege="RESTRICT">REVIEWERS</role>
+               <role privilege="RESTRICT">OWNER</role>
+            </roles>
+         </actionRules>
+         <actionRules>
+            <systemAction>DELETE</systemAction>
+            <roles>
+               <role privilege="PERMIT">ADMIN</role>
+               <role privilege="PERMIT">ASSIGNEES</role>
+               <role privilege="RESTRICT">APPROVERS</role>
+               <role privilege="RESTRICT">REVIEWERS</role>
+               <role privilege="RESTRICT">OWNER</role>
+               <role privilege="RESTRICT">CREATOR</role>
+            </roles>
+         </actionRules>
+         <actionRules>
+            <systemAction>ESCALATE</systemAction>
+            <roles>
+               <role privilege="PERMIT">ADMIN</role>
+               <role privilege="PERMIT">ASSIGNEES</role>
+               <role privilege="RESTRICT">APPROVERS</role>
+               <role privilege="RESTRICT">CREATOR</role>
+               <role privilege="RESTRICT">REVIEWERS</role>
+               <role privilege="RESTRICT">OWNER</role>
+            </roles>
+         </actionRules>
+         <actionRules>
+            <systemAction>OVERRIDE_ROUTING_SLIP</systemAction>
+            <roles>
+               <role privilege="PERMIT">ADMIN</role>
+               <role privilege="RESTRICT">APPROVERS</role>
+               <role privilege="RESTRICT">ASSIGNEES</role>
+               <role privilege="RESTRICT">CREATOR</role>
+               <role privilege="RESTRICT">REVIEWERS</role>
+               <role privilege="RESTRICT">OWNER</role>
+            </roles>
+         </actionRules>
+         <actionRules>
+            <systemAction>PURGE</systemAction>
+            <roles>
+               <role privilege="PERMIT">ADMIN</role>
+               <role privilege="RESTRICT">APPROVERS</role>
+               <role privilege="RESTRICT">ASSIGNEES</role>
+               <role privilege="RESTRICT">REVIEWERS</role>
+               <role privilege="RESTRICT">OWNER</role>
+               <role privilege="RESTRICT">CREATOR</role>
+            </roles>
+         </actionRules>
+         <actionRules>
+            <systemAction>REASSIGN</systemAction>
+            <roles>
+               <role privilege="PERMIT">ADMIN</role>
+               <role privilege="PERMIT">ASSIGNEES</role>
+               <role privilege="RESTRICT">APPROVERS</role>
+               <role privilege="RESTRICT">CREATOR</role>
+               <role privilege="RESTRICT">REVIEWERS</role>
+               <role privilege="RESTRICT">OWNER</role>
+            </roles>
+         </actionRules>
+         <actionRules>
+            <systemAction>RELEASE</systemAction>
+            <roles>
+               <role privilege="PERMIT">ADMIN</role>
+               <role privilege="PERMIT">ASSIGNEES</role>
+               <role privilege="RESTRICT">APPROVERS</role>
+               <role privilege="RESTRICT">CREATOR</role>
+               <role privilege="RESTRICT">REVIEWERS</role>
+               <role privilege="RESTRICT">OWNER</role>
+            </roles>
+         </actionRules>
+         <actionRules>
+            <systemAction>RENEW</systemAction>
+            <roles>
+               <role privilege="PERMIT">ASSIGNEES</role>
+               <role privilege="RESTRICT">ADMIN</role>
+               <role privilege="RESTRICT">APPROVERS</role>
+               <role privilege="RESTRICT">CREATOR</role>
+               <role privilege="RESTRICT">REVIEWERS</role>
+               <role privilege="RESTRICT">OWNER</role>
+            </roles>
+         </actionRules>
+         <actionRules>
+            <systemAction>RESUME</systemAction>
+            <roles>
+               <role privilege="PERMIT">ADMIN</role>
+               <role privilege="PERMIT">ASSIGNEES</role>
+               <role privilege="RESTRICT">APPROVERS</role>
+               <role privilege="RESTRICT">CREATOR</role>
+               <role privilege="RESTRICT">REVIEWERS</role>
+               <role privilege="RESTRICT">OWNER</role>
+            </roles>
+         </actionRules>
+         <actionRules>
+            <systemAction>SKIP_CURRENT_ASSIGNMENT</systemAction>
+            <roles>
+               <role privilege="PERMIT">ADMIN</role>
+               <role privilege="RESTRICT">APPROVERS</role>
+               <role privilege="RESTRICT">ASSIGNEES</role>
+               <role privilege="RESTRICT">CREATOR</role>
+               <role privilege="RESTRICT">REVIEWERS</role>
+               <role privilege="RESTRICT">OWNER</role>
+            </roles>
+         </actionRules>
+         <actionRules>
+            <systemAction>SUSPEND</systemAction>
+            <roles>
+               <role privilege="PERMIT">ADMIN</role>
+               <role privilege="PERMIT">ASSIGNEES</role>
+               <role privilege="RESTRICT">APPROVERS</role>
+               <role privilege="RESTRICT">CREATOR</role>
+               <role privilege="RESTRICT">REVIEWERS</role>
+               <role privilege="RESTRICT">OWNER</role>
+            </roles>
+         </actionRules>
+         <actionRules>
+            <systemAction>UPDATE</systemAction>
+            <roles>
+               <role privilege="PERMIT">ADMIN</role>
+               <role privilege="PERMIT">ASSIGNEES</role>
+               <role privilege="RESTRICT">APPROVERS</role>
+               <role privilege="RESTRICT">OWNER</role>
+               <role privilege="RESTRICT">CREATOR</role>
+               <role privilege="RESTRICT">REVIEWERS</role>
+            </roles>
+         </actionRules>
+         <actionRules>
+            <systemAction>WITHDRAW</systemAction>
+            <roles>
+               <role privilege="PERMIT">ADMIN</role>
+               <role privilege="RESTRICT">APPROVERS</role>
+               <role privilege="RESTRICT">ASSIGNEES</role>
+               <role privilege="RESTRICT">REVIEWERS</role>
+               <role privilege="RESTRICT">OWNER</role>
+               <role privilege="RESTRICT">CREATOR</role>
+            </roles>
+         </actionRules>
+         <actionRules>
+            <systemAction>DECOMPOSE_TASK</systemAction>
+            <roles>
+               <role privilege="PERMIT">ADMIN</role>
+               <role privilege="PERMIT">ASSIGNEES</role>
+               <role privilege="RESTRICT">APPROVERS</role>
+               <role privilege="RESTRICT">CREATOR</role>
+               <role privilege="RESTRICT">REVIEWERS</role>
+               <role privilege="RESTRICT">OWNER</role>
+            </roles>
+         </actionRules>
+      </accessRules>
       <showCompleteGraphicalHistory>true</showCompleteGraphicalHistory>
       <reevalTranslatablesOnUpdate>false</reevalTranslatablesOnUpdate>
-      <preActionMandatoryUserSteps>
-         <preActionMandatoryUserStep>
-            <userStep>PROVIDE_COMMENTS</userStep>
-            <outcome>OK</outcome>
-         </preActionMandatoryUserStep>
-      </preActionMandatoryUserSteps>
+      <preActionMandatoryUserSteps/>
       <allowInitiatorEditParticipants>false</allowInitiatorEditParticipants>
       <allowParticipantsEditParticipants>false</allowParticipantsEditParticipants>
       <globalCreationTask>false</globalCreationTask>

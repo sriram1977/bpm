@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
   <task-flow-definition id="SponsorApproval_TaskFlow">
-    <default-activity id="__110">taskDetails1_jspx</default-activity>
     <data-control-scope id="__225">
       <isolated/>
     </data-control-scope>

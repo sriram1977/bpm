@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?bpmo version="11.1.1.7.0.1.61" build="1.61" fullName="ProjectTypes.ProjectDataObject" modifiers="268435456"?>
+<!--########################################################################################-->
+<!--####                                                                                ####-->
+<!--####          THIS IS AN AUTO GENERATED FILE. PLEASE DO NOT MANUALLY MODIFY         ####-->
+<!--#### CHANGES TO THIS FILE MAY PRODUCE UNEXPECTED BEHAVIOR AND WOULD BE OVERWRITTEN  ####-->
+<!--####                                                                                ####-->
+<!--########################################################################################-->
+<xs:schema targetNamespace="http://xmlns.oracle.com/bpm/bpmobject/ProjectTypes/ProjectDataObject" elementFormDefault="qualified" xmlns="http://xmlns.oracle.com/bpm/bpmobject/ProjectTypes/ProjectDataObject"  xmlns:xs="http://www.w3.org/2001/XMLSchema"  xmlns:bpmo="http://xmlns.oracle.com/bpm/bpmobject/" >
+    <xs:complexType name="ProjectDataObjectType">
+        <xs:sequence>
+            <xs:element name="brdURL" nillable="true" type="xs:string"/>
+            <xs:element name="projectCost" nillable="true" type="xs:decimal"/>
+            <xs:element name="highLevelApprovalRequired" nillable="true" type="xs:boolean"/>
+            <xs:element name="highLevelApprovalState" nillable="true" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="ProjectDataObject" type="ProjectDataObjectType"/>
+</xs:schema>
